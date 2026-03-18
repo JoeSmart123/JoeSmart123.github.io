@@ -25,3 +25,14 @@ footer {
     padding: 10px;
     text-align: center;
 }
+
+#box{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+.green{
+    background-color: green;
+}
