@@ -1,6 +1,7 @@
 let timeLeft = 10;
 let countdow;
 let readyToReset = false;
+let currentWord = "Please Generate"
 
 function sayHello() {
     alert("Hello World!");
@@ -23,13 +24,22 @@ function startTimer() {
 
             if (timeLeft <= 0) {
                 clearInterval(countdown);
-                alert("times up");
             }
 
         }, 1000);
         timeLeft = 10;
         readyToReset = true;
-    } else {
-        alert("Do not attempt to beat the counter.")
     }
+}
+
+function init() {
+    makeGreen();
+    setTimeout(() => {
+        window.location.href = "/startingpage.html";
+    }, 750);
+}
+
+function generate() {
+    makeGreen();
+    startTimer();
 }

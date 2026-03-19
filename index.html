@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Main</title>
 
     <!-- Link to CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -12,28 +12,26 @@
 
     <!-- Header -->
     <header>
-        <h1>My Website</h1>
+        <h1>Charades</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="pages/startingpage.html">next</a>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <h2>Welcome 👋</h2>
-        <p>This is my first website.</p>
+        <div class="container">
+            <h2></h2>
+            <p>This is my first website.</p>
 
-        <div id="box"></div>
-        <p id="timer"></p>
-        <button onclick="startTimer()">start timer</button>
-        <button onclick="makeGreen()">Change Box</button>
-        <button onclick="sayHello()">Click Me</button>
+            <button id="box" onclick="init()">Generate</button>
+            <button onclick="startTimer()">start timer</button>
+            <button onclick="sayHello()">Click Me</button>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 My Website</p>
+        <p>© 2026 Charades</p>
     </footer>
 
     <!-- Link to JavaScript -->
