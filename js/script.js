@@ -3,6 +3,6 @@ function sayHello() {
 }
 
 function makeGreen() {
-    document.getElementById("box").classList.toggle("green");
+    document.getElementById("box").classList.add("green");
     alert("This works");
 }
