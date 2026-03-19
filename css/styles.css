@@ -26,6 +26,12 @@ footer {
     text-align: center;
 }
 
+#timer{
+    font-size: 48;
+    font-weight: bold;
+    margin-bottom: 20;
+}
+
 #box{
     width: 150px;
     height: 150px;
@@ -35,4 +41,8 @@ footer {
 
 .green{
     background-color: green;
+}
+
+.red{
+    background-color: red;
 }
