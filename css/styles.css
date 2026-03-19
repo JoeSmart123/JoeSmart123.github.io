@@ -1,5 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    aspect-ratio: 1 / 1;
+    gap: 20px;
     margin: 0;
     padding: 0;
 }
@@ -8,6 +10,7 @@ header {
     background: #333;
     color: white;
     padding: 15px;
+
 }
 
 nav a {
@@ -35,8 +38,30 @@ footer {
 #box{
     width: 150px;
     height: 150px;
-    background-color: red;
-    margin-bottom: 10px;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+#box:focus {
+    outline: none;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    background-color: #eee;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #eee;
 }
 
 .green{
