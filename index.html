@@ -1,41 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Charades</title>
 
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Poppins">
 
-    <!-- Header -->
-    <header>
-        <h1>Charades</h1>
-        <nav>
-        </nav>
-    </header>
+        <!-- Link to CSS -->
+        <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Main Content -->
-    <main>
-        <div class="container">
-            <h2></h2>
-            <p>This is my first website.</p>
-
-            <button id="box" onclick="init()">Generate</button>
-            <button onclick="startTimer()">start timer</button>
-            <button onclick="sayHello()">Click Me</button>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Charades</p>
-    </footer>
-
-    <!-- Link to JavaScript -->
-    <script src="js/script.js"></script>
-
-</body>
+        <!-- Link to JavaScript -->
+        <script  type="module" src="js/timer.js"></script>
+        <script  type="module" src="js/cards.js"></script>
+    </head>
+    <body>
+        <div id="timer" class="cgrid"></div>
+        <ul id="card-stack"></ul>
+    </body>
 </html>
