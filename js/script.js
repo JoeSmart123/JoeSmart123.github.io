@@ -46,18 +46,24 @@ function generate() {
     startTimer();
 }
 
-// function createTeam(teamName) {
-//     localStorage.setItem('team', JSON.stringify(teamName))
-// }
+function createTeam(names) {
+    let nameString = names;
+    if (nameString.charAt(nameString.length - 1) === " ") {
+        nameString = nameString.trim();
+    }
 
-function createTeam(name1, name2) {
-    teams.push({name1, name2, score: 0});
+    let name = nameString.replaceAll(" ", " & ");
+    
+    teams.push({name, score: 0});
+
     renderTeams();
 }
 
 function addPoint(index) {
     teams[index].score++;
-    renderTeams();
+    if (document.URL.includes("scoreboard")) {
+        renderTeams();      
+    }
 }
 
 function removePoint(index) {
@@ -65,8 +71,8 @@ function removePoint(index) {
         alert("No points to remove");
     } else {
         teams[index].score--;
-        renderTeams();
     }
+    renderTeams();
 }
 
 function removeTeam(index) {
@@ -84,7 +90,7 @@ function renderTeams() {
     teams.forEach((team, index) => {
         container.innerHTML += `
             <div class="team">
-                <p>${team.name1} & ${team.name2}</p>
+                <p>${team.name}</p>
                 <p>Score: ${team.score}</p>
                 <div class="teamButtons">
                     <button id="teamBox" onclick="addPoint(${index})">+1</button>
@@ -96,13 +102,17 @@ function renderTeams() {
     });
 }
 
-function addTeam() {
-    const name1 = document.getElementById("p1").value;
-    const name2 = document.getElementById("p2").value;
+function teamStatPopUp() {
 
-    createTeam(name1, name2);
+}
+
+function addTeam() {
+    let names = document.getElementById("p1").value;
+    
+    createTeam(names);
 }
 
 function goToScoreboard() {
     window.location.href = "scoreboard.html";
+    renderTeams();
 }
