@@ -1,4 +1,4 @@
-const wordList = await fetch("../charades-words.json").then(res => res.json());
+const wordList = await fetch("charades_words.json").then(res => res.json());
 const cardStack = document.getElementById("card-stack");
 
 function newCard(fadeIn = true) {

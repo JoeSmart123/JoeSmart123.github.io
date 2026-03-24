@@ -72,6 +72,8 @@ body, .cgrid {
     align-items: center;
     gap: 30px;
     background-color: #eee;
+}
+
 #card-stack {
     position: relative;
     justify-content: center;
